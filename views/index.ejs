@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing</title>
+    <link rel="stylesheet" href="/public/style.css">
+    <script src="https://kit.fontawesome.com/f965c56d37.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+    background-color: #94618E;
+}
+
+.container {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    width: 400px;
+    max-width: 100%;
+    background-color: #F4DECB;
+    color: white;
+    margin-left: 450px;
+    margin-top: 160px;
+  }
+
+.form {
+    padding: 40px 50px;
+}
+
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+}
+
+.form-control i {
+    position: absolute;
+    display: flex;
+    margin-top: 25px;
+    font-size: 20px;
+    color: black;
+    margin-left: 15px;
+}
+
+.form-control input {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 10px;
+    width: 80%;
+    margin-left: 40px;
+}
+
+.form button {
+    border: 2px solid black;
+    border-radius: 4px;
+    display: block;
+    font-family: inherit;
+    font-size: 16px;
+    padding: 10px;
+    width: 50%;
+    margin: auto;
+    cursor: pointer;
+    background-color: #49274A;
+    color: white;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form class="form" id="form" action="/login" method="POST" onsubmit="return validate()">
+            <div class="form-control">
+                <i class="fas fa-user"></i>
+                name: <input id="username" type="text" placeholder="Name" name="name">
+            </div>
+
+            <div class="form-control">
+                <i class="fas fa-at"></i>
+                email: <input id="email" type="text" placeholder="Mail Id" name="email">
+            </div>
+            
+            <button type="submit" id="submit">Submit</button>
+            <button>Send Mail</button>
+        </form>
+    </div>
+
+<script>
+    const form = document.getElementById('form');
+    const username = document.getElementById('username');
+    const email = document.getElementById('email');
+
+function validate() {
+    const usernameValue = username.value.trim();
+    const emailValue = email.value.trim();
+
+    if(usernameValue =="" && emailValue =="") {
+        alert("Fields should not be empty")
+        return false;
+    }
+    else {
+        return true;
+    }
+} 
+</script>
+
+</body>
+</html>

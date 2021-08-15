@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greetings</title>
+  <link rel="stylesheet" href="/public/style.css">
+  <style>
+    h1 {
+      color: #000080;
+      font-size: 50px;
+      font-weight: bolder;
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      padding: 10px;
+      animation-name: example;
+      animation-duration: 10s;
+    }
+    @keyframes example {
+  0%   {background-color: #000080;}
+  25%  {background-color: #FF9933;}
+  50%  {background-color: #FFFFFF;}
+  100% {background-color: #138808;}
+}
+  </style>
+</head>
+<body bgcolor = white>
+  <h1>HAPPY INDEPENDENCE DAY</h1>
+  <h1><%=name%></h1>
+</body>
+</html>
